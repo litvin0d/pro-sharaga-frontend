@@ -1,4 +1,5 @@
 @import "../../scss/variables";
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400&display=swap');
 
 .header {
     width: 100%;
@@ -14,8 +15,13 @@
         align-items: center;
 
         img {
-            width: 48px;
-            margin-right: 8px;
+            width: 38px;
+            margin-right: 5px;
+            padding-bottom: 5px;
+        }
+
+        h2 {
+            font-family: 'Kanit', sans-serif;
         }
     }
 
@@ -24,11 +30,27 @@
         align-items: center;
 
         a {
-            padding: 23px 63px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 180px;
+            height: 63px;
             font-weight: 600;
+            padding-bottom: 3px;
+            transition: background-color .25s ease-in-out;
 
             &:hover {
-                background: $gray;
+                background: $gray-hov;
+            }
+        }
+
+        .active {
+            border-bottom: 3px solid $blue;
+            padding-bottom: 0;
+            color: $blue;
+
+            &:hover {
+                background: $blue-hov;
             }
         }
     }

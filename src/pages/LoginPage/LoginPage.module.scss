@@ -1,0 +1,99 @@
+@import "../../scss/variables";
+
+.root {
+    height: 100vh;
+    width: 100vw;
+    background: $main-bg;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: $sub-bg;
+        border-radius: 15px;
+        padding: 32px;
+        width: 400px;
+
+        .title {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 32px;
+    
+            img {
+                width: 52px;
+                margin-right: 5px;
+                padding-bottom: 8px;
+            }
+    
+            h2 {
+                font-family: 'Kanit', sans-serif;
+                font-size: 42px;
+                color: $font;
+    
+                span {
+                    background-image: $font-grad;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: $font-dark;
+        }
+
+        input {
+            border: 3px solid $dark-blue;
+            padding: 12px;
+            width: 100%;
+            border-radius: 15px;
+            font-size: 16px;
+            background: $sub-bg;
+            color: $font-dark;
+            transition: all .25s ease-in-out;
+
+            &:first-of-type {   
+                margin-bottom: 16px;
+            }
+
+            &:last-of-type {
+                margin-bottom: 32px;
+            }
+
+            &:focus {
+                border-color: $blue;
+                color: $font;
+            }
+
+            &:valid {
+                border-color: $blue;
+                color: $font;
+            }
+        }
+
+        button {
+            font-size: 18px;
+            border: none;
+            background: $dark-blue;
+            color: $font-dark;
+            width: 100%;
+            padding: 12px 0;
+            border-radius: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: all .25s ease-in-out;
+
+            &:hover {
+                cursor: pointer;
+                color: $font;
+                background-color: $blue;
+            }
+        }
+    }
+}
