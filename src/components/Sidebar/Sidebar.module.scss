@@ -1,0 +1,79 @@
+@import "../../scss/variables";
+
+.root {
+    background: $sub-bg;
+    width: 350px;
+    left: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .logo {
+        font-size: 26px;
+        margin-top: 32px;
+    }
+
+    .userTitle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 64px;
+
+        img {
+            width: 100px;
+            margin-bottom: 12px;
+            opacity: 0.9;
+        }
+
+        h3 {
+            color: $font;
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        p {
+            color: $font-dark;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+
+    .logout {
+        display: flex;
+        align-items: center;
+        margin-bottom: 32px;
+        background: inherit;
+        width: 100%;
+        padding-left: 60px;
+        position: absolute;
+        bottom: 0;
+        cursor: pointer;
+
+        svg {
+            fill: $font-dark;
+            width: 32px;
+            height: 32px;
+            margin-right: 16px;
+            transition: fill 0.25s ease-in-out;
+        }
+
+        span {
+            color: $font-dark;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.25s ease-in-out;
+        }
+
+        &:hover {
+            svg {
+                fill: $red;
+            }
+
+            span {
+                color: $font;
+            }
+        }
+    }
+}

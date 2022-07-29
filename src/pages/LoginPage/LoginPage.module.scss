@@ -18,29 +18,8 @@
         padding: 32px;
         width: 400px;
 
-        .title {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            margin-bottom: 32px;
-    
-            img {
-                width: 52px;
-                margin-right: 5px;
-                padding-bottom: 8px;
-            }
-    
-            h2 {
-                font-family: 'Kanit', sans-serif;
-                font-size: 42px;
-                color: $font;
-    
-                span {
-                    background-image: $font-grad;
-                    background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-            }
+        .logo {
+            font-size: 42px;
         }
 
         p {
@@ -56,9 +35,9 @@
             font-size: 16px;
             background: $sub-bg;
             color: $font-dark;
-            transition: all .25s ease-in-out;
+            transition: all 0.25s ease-in-out;
 
-            &:first-of-type {   
+            &:first-of-type {
                 margin-bottom: 16px;
             }
 
@@ -67,12 +46,12 @@
             }
 
             &:focus {
-                border-color: $blue;
+                border-color: $purple;
                 color: $font;
             }
 
             &:valid {
-                border-color: $blue;
+                border-color: $purple;
                 color: $font;
             }
         }
@@ -87,12 +66,12 @@
             border-radius: 15px;
             font-weight: 600;
             text-transform: uppercase;
-            transition: all .25s ease-in-out;
+            transition: all 0.25s ease-in-out;
 
             &:hover {
                 cursor: pointer;
                 color: $font;
-                background-color: $blue;
+                background-color: $purple;
             }
         }
     }

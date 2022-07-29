@@ -1,4 +1,4 @@
-@import "../variables";
+@import "./variables";
 
 * {
     padding: 0;
@@ -17,8 +17,9 @@ html {
 body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    color: $black;
+    color: $font;
     font-weight: 500;
+    background: $main-bg;
 }
 
 a,

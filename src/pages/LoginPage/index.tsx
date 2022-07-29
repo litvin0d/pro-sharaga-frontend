@@ -1,14 +1,11 @@
-import React from "react";
-
 import s from "./LoginPage.module.scss";
+import Logo from "../../components/Logo";
 
 const LoginPage = () => {
     return (
         <div className={s.root}>
             <form className={s.form}>
-                <div className={s.title}>
-                    <h2>Pro<span>Sharaga</span></h2>
-                </div>
+                <Logo className={s.logo} />
                 <p>Войдите через Проколледж</p>
                 <input
                     type="text"
