@@ -1,0 +1,44 @@
+@import "../../scss/variables";
+
+.user {
+	position: relative;
+
+	.userLabel {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+
+		span {
+			color: $font;
+		}
+
+		svg {
+			margin-left: 8px;
+			fill: $font-dark;
+		}
+	}
+
+	.userPopup {
+		position: absolute;
+		margin-top: 16px;
+		background: $sub-bg;
+		box-shadow: 0 6px 16px 8px rgba(118,66,208,0.75);
+		border-radius: 15px;
+		overflow: hidden;
+		padding: 8px;
+
+		ul {
+			overflow: hidden;
+
+			li {
+				padding: 8px 16px;
+				color: $font-dark;
+				width: 400px;
+
+				span {
+					color: $font;
+				}
+			}
+		}
+	}
+}

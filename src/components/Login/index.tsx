@@ -1,7 +1,7 @@
-import s from "./LoginPage.module.scss";
-import Logo from "../../components/Logo";
+import s from "./Login.module.scss";
+import Logo from "../Logo";
 
-const LoginPage = () => {
+const Login = () => {
     return (
         <div className={s.root}>
             <form className={s.form}>
@@ -21,8 +21,12 @@ const LoginPage = () => {
                 />
                 <button>Войти</button>
             </form>
+
+            <p className={s.text}>
+                ProSharaga не несёт ответственность за достоверность отображаемых данных
+            </p>
         </div>
     );
 };
 
-export default LoginPage;
+export default Login;

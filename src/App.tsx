@@ -1,17 +1,12 @@
-import { Routes, Route } from "react-router-dom";
-
 import "./scss/index.scss";
-// import LoginPage from "./pages/LoginPage";
-import Sidebar from "./components/Sidebar";
+// import Login from "./components/Login";
+import Header from "./components/Header";
 
 const App = () => {
     return (
         <div>
-            {/* <LoginPage /> */}
-            <Sidebar />
-            <Routes>
-                <Route path="/" />
-            </Routes>
+             {/*<Login />*/}
+            <Header />
         </div>
     );
 };

@@ -41,5 +41,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/litvin0d/pro-sharaga-frontend.git",
+  "author": "litvin0d <litvinovd944@gmail.com>",
+  "license": "MIT"
 }
