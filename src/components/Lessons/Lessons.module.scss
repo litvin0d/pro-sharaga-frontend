@@ -1,0 +1,49 @@
+@import "../../scss/variables";
+
+.root {
+	width: 70%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 32px;
+}
+
+.swiper {
+	height: 250px;
+	margin: 0 16px;
+}
+
+.btn {
+	background: $sub-bg;
+	color: $font;
+	border: none;
+	font-size: 36px;
+	padding: 6px 16px;
+	border-radius: 50px;
+	opacity: 0.5;
+}
+
+.slide {
+	background: $sub-bg;
+	border-radius: 15px;
+	padding: 32px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow: hidden;
+
+	h3 {
+		color: $font;
+	}
+
+	div {
+		p {
+			color: $font-dark;
+			margin-bottom: 4px;
+		}
+
+		h3 {
+			color: $font;
+		}
+	}
+}

@@ -1,12 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 
 import s from "./User.module.scss";
+import { IUserInfo } from "../../models";
 
-const User = () => {
+interface UserProps {
+	userName: string,
+	userInfo: IUserInfo,
+}
+
+const User = ({ userName, userInfo }: UserProps) => {
+	// state открытого popup окна
 	const [open, setOpen] = useState(false);
 
 	const userRef = useRef(null);
 
+	// обработчик клика "снаружи" popup окна для его закрытия
 	useEffect(() => {
 		const handleClickOutside = (event: MouseEvent) => {
 			const _event = event as any;
@@ -19,13 +27,21 @@ const User = () => {
 		document.body.addEventListener("click", handleClickOutside);
 
 		return () => document.body.removeEventListener("click", handleClickOutside);
-	}, [])
+	}, []);
+
+	// меняет местами фамилию и имя
+	const swapName = (name: string) => {
+		let result: string[] = name.split(" ");
+		if (result.length < 2) return result;
+		return [result[1], result[0]].concat(result.slice(2, result.length)).join(" ");
+	}
 
 	return (
 		<div className={s.user} ref={userRef}>
 			<div className={s.userLabel} onClick={() => setOpen(!open)}>
-				<span>Даниил Литвинов</span>
+				<span className={open ? s.active : ""}>{swapName(userName)}</span>
 				<svg
+					className={open ? s.active : ""}
 					width="10"
 					height="6"
 					viewBox="0 0 10 6"
@@ -39,15 +55,15 @@ const User = () => {
 			{open && (
 				<div className={s.userPopup}>
 					<ul>
-						<li>Специальность: <span>Информационные системы и программирование</span></li>
-						<li>Форма обучения: <span>Очная</span></li>
-						<li>Группа: <span>ИСП-8-20</span></li>
-						<li>Куратор: <span>Кондакова Ирина Владимировна</span></li>
+						<li>Специальность: <br/><div>{userInfo.speciality}</div></li>
+						<li>Форма обучения: <br/><div>{userInfo.form}</div></li>
+						<li>Группа: <br/><div>{userInfo.group}</div></li>
+						<li>Куратор: <br/><div>{userInfo.curator}</div></li>
 					</ul>
 				</div>
 			)}
 		</div>
 	);
-}
+};
 
 export default User;

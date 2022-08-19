@@ -1,4 +1,6 @@
-export const userData = {
+import { IUser } from "../models";
+
+export const userData: IUser = {
 	"success": true,
 	"name": "Литвинов Даниил",
 	"info": {
