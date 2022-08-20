@@ -1,0 +1,99 @@
+@import "../../scss/variables";
+
+.root {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border-radius: 15px;
+	background: $sub-bg;
+	padding: 32px;
+	margin-top: 32px;
+	width: 30%;
+	max-height: 250px;
+
+	.title {
+		color: $font-dark;
+		font-weight: 500;
+		margin-bottom: 16px;
+	}
+
+	.timetableList {
+
+		.timetableItem {
+			display: flex;
+			border-bottom: 2px solid $purple;
+			//align-items: center;
+			margin-top: 16px;
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			&:last-child {
+				border-bottom: none;
+			}
+
+			.number {
+				color: $font;
+				margin-right: 16px;
+				font-weight: 500;
+			}
+
+			.time {
+				color: $font-dark;
+				font-size: 12px;
+				margin-right: 32px;
+			}
+
+			.lessonWrapper {
+				width: 100%;
+				.lesson {
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+					padding-bottom: 8px;
+
+					.lessonTitle {
+						display: flex;
+						width: 100%;
+						justify-content: space-between;
+
+						.lessonName {
+							color: $font;
+							font-weight: 500;
+							font-size: 16px;
+							padding-bottom: 4px;
+						}
+
+						.status {
+							font-size: 12px;
+							font-weight: 600;
+							display: none;
+
+							&.added {
+								display: block;
+								color: $green;
+							}
+
+							&.canceled {
+								display: block;
+								color: $red;
+							}
+						}
+					}
+
+					.lessonInfo {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+
+						p {
+							color: $font-dark;
+							font-size: 12px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

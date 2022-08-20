@@ -85,7 +85,7 @@ export const userData: IUser = {
 					"name": "Психология",
 					"teacher": "Антонова",
 					"classroom": "319",
-					"status": "отменено"
+					"status": "добавлено"
 				}
 			]
 		},

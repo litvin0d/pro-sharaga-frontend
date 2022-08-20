@@ -14,13 +14,38 @@
 }
 
 .btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background: $sub-bg;
 	color: $font;
 	border: none;
 	font-size: 36px;
-	padding: 6px 16px;
 	border-radius: 50px;
 	opacity: 0.5;
+	cursor: pointer;
+
+	svg {
+		fill: $font;
+		height: 28px;
+		width: 28px;
+	}
+
+	&:first-child {
+		padding: 16px 18px 16px 14px;
+	}
+
+	&:last-child {
+		padding: 16px 14px 16px 18px;
+	}
+
+	&:hover {
+		opacity: 1;
+	}
+
+	&:active {
+		opacity: 1;
+	}
 }
 
 .slide {
@@ -31,6 +56,7 @@
 	flex-direction: column;
 	justify-content: space-between;
 	overflow: hidden;
+	font-size: 16px;
 
 	h3 {
 		color: $font;
@@ -40,10 +66,16 @@
 		p {
 			color: $font-dark;
 			margin-bottom: 4px;
+			font-size: 14px;
+			font-weight: 600;
 		}
 
 		h3 {
 			color: $font;
 		}
+	}
+
+	&.active {
+		background: $active-bg;
 	}
 }

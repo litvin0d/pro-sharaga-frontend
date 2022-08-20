@@ -19,8 +19,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     color: $font;
-    font-weight: 500;
     background: $main-bg;
+    font-weight: 500;
 }
 
 a,
@@ -53,7 +53,6 @@ a {
     display: flex;
     justify-content: center;
     width: calc(100vw - 100px);
-    height: 100%;
     margin: 50px auto;
     max-width: 1400px;
 
