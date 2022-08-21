@@ -1,6 +1,6 @@
 import s from "./Header.module.scss";
 import Logo from "../Logo";
-import User from "../User";
+import UserInfo from "../UserInfo";
 import { userData } from "../../data/userData";
 
 const Header = () => {
@@ -9,7 +9,7 @@ const Header = () => {
 			<Logo className={s.logo} />
 
 			<div className={s.info}>
-				<User userName={userData.name} userInfo={userData.info} />
+				<UserInfo userName={userData.name} userInfo={userData.info} />
 
 				<svg
 					className={s.svg}

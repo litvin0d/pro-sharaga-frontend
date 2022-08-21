@@ -97,7 +97,7 @@ export const userData: IUser = {
 					"name": "МДК.08.02",
 					"teacher": "Жукова",
 					"classroom": "30",
-					"status": "отменено"
+					"status": ""
 				},
 				{
 					"name": "МДК.08.02",

@@ -1,31 +1,37 @@
 import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/scss";
 
-import s from "./Lessons.module.scss";
 import { IUser, IUserGrades } from "../../models";
+import { RootState } from "../../redux/store";
+import { setLessonId } from "../../redux/lessonSlice";
+import s from "./LessonsSlider.module.scss";
 
 interface lessonsProps {
 	userData: IUser;
 }
 
-const Lessons = ({ userData }: lessonsProps) => {
+const LessonsSlider = ({ userData }: lessonsProps) => {
+	const lessonId = useSelector((state: RootState) => state.lessonReducer.lessonId);
+	const dispatch = useDispatch();
+	// const [active, setActive] = useState(1);
 	const [swipe, setSwipe] = useState<any>();
-	const [active, setActive] = useState(1);
+
 
 	const prevActiveSlide = (lessons: object[]) => {
-		if (active === 0) {
-			setActive(lessons.length - 1);
+		if (lessonId === 0) {
+			dispatch(setLessonId(lessons.length - 1));
 		} else {
-			setActive(active - 1);
+			dispatch(setLessonId(lessonId - 1));
 		}
 	};
 
 	const nextActiveSlide = (lessons: object[]) => {
-		if (active > lessons.length - 2) {
-			setActive(0);
+		if (lessonId > lessons.length - 2) {
+			dispatch(setLessonId(0));
 		} else {
-			setActive(active + 1);
+			dispatch(setLessonId(lessonId + 1));
 		}
 	};
 
@@ -63,21 +69,23 @@ const Lessons = ({ userData }: lessonsProps) => {
 				loopFillGroupWithBlank={true}
 				className={s.swiper}
 			>
-				{userData.grades.map((obj: IUserGrades, i: number) => (
-					<SwiperSlide
-						key={i}
-						className={`${s.slide} ${active === i ? s.active : ""}`}
-						onClick={() => setActive(i)}
-					>
-						<h3>{obj["Дисциплина"]}</h3>
-						<div>
-							<p>Средний балл</p>
-							<h3>{
-								isNaN(+averageGrades(obj["Оценки"])) ? "Неизвестно" : averageGrades(obj["Оценки"])
-							}</h3>
-						</div>
-					</SwiperSlide>
-				))}
+				{userData.grades.map((obj: IUserGrades, i: number) => {
+					return (
+						<SwiperSlide
+							key={i}
+							className={`${s.slide} ${lessonId === i ? s.active : ""}`}
+							onClick={() => dispatch(setLessonId(i))}
+						>
+							<h3>{obj["Дисциплина"]}</h3>
+							<div>
+								<p>Средний балл</p>
+								<h3>{
+									isNaN(+averageGrades(obj["Оценки"])) ? "Нет данных" : averageGrades(obj["Оценки"])
+								}</h3>
+							</div>
+						</SwiperSlide>
+					);
+				})}
 			</Swiper>
 			<button className={s.btn} onClick={() => swipe?.slideNext() && nextActiveSlide(userData.grades)}>
 				<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><title/>
@@ -90,4 +98,4 @@ const Lessons = ({ userData }: lessonsProps) => {
 	);
 };
 
-export default Lessons;
+export default LessonsSlider;

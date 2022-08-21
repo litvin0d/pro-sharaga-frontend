@@ -1,0 +1,26 @@
+@import "../../scss/variables";
+
+.root {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	border-radius: 15px;
+	padding: 32px;
+	background: $sub-bg;
+	height: 400px;
+	overflow: hidden;
+
+	h3 {
+		color: $font-dark;
+		font-weight: 500;
+		margin-bottom: 16px;
+	}
+
+	.chart {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+	}
+}

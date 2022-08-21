@@ -1,0 +1,24 @@
+@import "../../scss/variables";
+
+.root {
+	display: flex;
+	justify-content: center;
+	width: calc(100vw - 100px);
+	margin: 50px auto;
+	max-width: 1400px;
+	flex-direction: column;
+
+	.wrapper {
+		width: 100%;
+		display: flex;
+
+		.left {
+			width: calc(70% - 32px);
+			margin-right: 32px;
+		}
+
+		.right {
+			width: 30%;
+		}
+	}
+}

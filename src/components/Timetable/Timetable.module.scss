@@ -8,8 +8,8 @@
 	background: $sub-bg;
 	padding: 32px;
 	margin-top: 32px;
-	width: 30%;
-	max-height: 250px;
+	width: 100%;
+	height: 250px;
 
 	.title {
 		color: $font-dark;
@@ -18,11 +18,16 @@
 	}
 
 	.timetableList {
+		overflow-y: scroll;
+
+		scrollbar-width: none;
+		&::-webkit-scrollbar {
+			width: 0;
+		}
 
 		.timetableItem {
 			display: flex;
 			border-bottom: 2px solid $purple;
-			//align-items: center;
 			margin-top: 16px;
 
 			&:first-child {

@@ -25,9 +25,10 @@
 			transition: transform .25s ease-in-out;
 			height: 14px;
 			width: 14px;
+			transform: rotate(180deg);
 
 			&.active {
-				transform: rotate(180deg);
+				transform: rotateX(360deg);
 				fill: $font;
 			}
 		}

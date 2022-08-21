@@ -1,7 +1,7 @@
-import s from "./Login.module.scss";
-import Logo from "../Logo";
+import s from "./LoginPage.module.scss";
+import Logo from "../../components/Logo";
 
-const Login = () => {
+const LoginPage = () => {
     return (
         <div className={s.root}>
             <form className={s.form}>
@@ -29,4 +29,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default LoginPage;

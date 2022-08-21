@@ -7,7 +7,6 @@
     outline: none;
     font-family: "Montserrat", sans-serif;
     box-sizing: border-box;
-    transition: all .25s ease-in-out;
 }
 
 html {
@@ -20,6 +19,7 @@ body {
     -webkit-font-smoothing: antialiased;
     color: $font;
     background: $main-bg;
+    max-height: 100vh;
     font-weight: 500;
 }
 
@@ -47,18 +47,6 @@ h2 {
 
 a {
     text-decoration: none;
-}
-
-.wrapper {
-    display: flex;
-    justify-content: center;
-    width: calc(100vw - 100px);
-    margin: 50px auto;
-    max-width: 1400px;
-
-    .app {
-        width: 100%;
-    }
 }
 
 @mixin noselect {

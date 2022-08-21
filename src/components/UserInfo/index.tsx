@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-import s from "./User.module.scss";
+import s from "./UserInfo.module.scss";
 import { IUserInfo } from "../../models";
 
 interface UserProps {
@@ -8,7 +8,7 @@ interface UserProps {
 	userInfo: IUserInfo,
 }
 
-const User = ({ userName, userInfo }: UserProps) => {
+const UserInfo = ({ userName, userInfo }: UserProps) => {
 	// state открытого popup окна
 	const [open, setOpen] = useState(false);
 
@@ -66,4 +66,4 @@ const User = ({ userName, userInfo }: UserProps) => {
 	);
 };
 
-export default User;
+export default UserInfo;
