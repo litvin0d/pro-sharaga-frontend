@@ -7,13 +7,13 @@
 	border-radius: 15px;
 	padding: 32px;
 	background: $sub-bg;
-	height: 400px;
 	overflow: hidden;
+	gap: 32px;
+	height: 450px;
 
 	h3 {
 		color: $font-dark;
 		font-weight: 500;
-		margin-bottom: 16px;
 	}
 
 	.chart {

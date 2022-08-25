@@ -38,7 +38,7 @@ const GradeChart = ({ userData }: gradeChartProps) => {
 
 	return (
 		<div className={s.root}>
-			<h3>График успеваемости</h3>
+			<h3>Успеваемость</h3>
 			<ResponsiveContainer className={s.chart}>
 				<BarChart
 					data={getGrades(userData.grades)}

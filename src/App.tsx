@@ -4,10 +4,10 @@ import "./scss/index.scss";
 
 const App = () => {
 	return (
-		<>
+		<div className="App">
 			{/*<LoginPage />*/}
 			<MainPage />
-		</>
+		</div>
 	);
 };
 

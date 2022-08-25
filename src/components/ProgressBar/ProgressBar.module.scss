@@ -1,0 +1,69 @@
+@import "../../scss/variables";
+
+.root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+    width: 100%;
+    padding: 32px;
+    border-radius: 12px;
+    background: $sub-bg;
+    overflow: hidden;
+    height: 450px;
+
+    h3 {
+        color: $font-dark;
+        font-weight: 500;
+    }
+
+    //&:nth-child(1):nth-child(2):nth-child(3) {
+    //    flex: 1 1 0;
+    //}
+}
+
+.progressBar {
+    width: 80%;
+    align-self: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .count {
+        display: flex;
+        align-items: center;
+
+        h3 {
+            font-size: 32px;
+            color: $font;
+            font-weight: 600;
+            margin-right: 4px;
+            margin-bottom: 16px;
+        }
+
+        p {
+            font-size: 24px;
+            color: $font-dark;
+        }
+    }
+
+    p {
+        font-size: 24px;
+        color: $font-dark;
+    }
+}
+
+.percentage {
+    color: $font-dark;
+
+    span {
+        padding: 0 10px;
+        border-radius: 50px;
+        background: $purple;
+        margin-right: 16px;
+    }
+}

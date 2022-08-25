@@ -16,7 +16,7 @@
         color: $font;
 
         span {
-            background-image: $font-grad;
+            background-image: $active-bg;
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
